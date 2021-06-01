@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/pal0hqu.css");
+
+$grey-light: #d9d9d9;
+$grey: #bfbfbf;
+$grey-dark: #595959;
+
+$font-default: operetta-12, serif;
+
+
+html {
+    // 1rem = 10px
+    font-size: 62.5%;
+}
+
+body {
+  font-family: $font-default;
+  font-weight: 500;
+  font-style: normal;
+  color: $grey-dark;
+}
+
+.cont {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+
+  display: grid;
+  grid-template-rows: max-content 1fr 12vh;
+}
+
+.header {
+    &__sk {
+        font-weight: 600;
+    }
+
+    &__jd {
+        color: $grey;
+    }
+
+    &__about {
+        font-weight: 600;
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+
+    &__logo {
+        width: 90%;
+    }
+}
+
+.bar {
+    background-color: $grey;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
